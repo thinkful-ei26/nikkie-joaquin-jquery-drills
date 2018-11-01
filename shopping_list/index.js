@@ -1,3 +1,6 @@
+'use strict';
+/*eslint-env jquery*/
+//^js comment that eslint parses
 
 function generateListItem(item) //does this also need to be wrapped in a jquery object?
 {
@@ -20,14 +23,12 @@ $(function(){
 
     //grab what was inputted
     const newItem = $('form input').val();
-    // console.log(newItem);
 
     //clear the input box
     event.target.reset();
 
     //make a list element with the input
     const listElement = generateListItem(newItem);
-    console.log(listElement); 
 
     //make that list element appear
     $('.shopping-list').append(listElement);
@@ -36,8 +37,12 @@ $(function(){
   //add delete functionality
   $('.shopping-list').on('click', '.shopping-item-delete', event =>{
     $(event.target).closest('li').remove();
-    
+  });
 
-    //console.log($(event.currentTarget));
+  //toggle check functionality: 
+  $('.shopping-list').on('click', '.shopping-item-toggle', event =>{
+
+    $(event.target).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
+
   });
 });
