@@ -34,4 +34,11 @@ $(function(){
     $('.shopping-list').append(listElement);
 
   });
+  //add delete functionality
+  $('.shopping-list').on('click', '.shopping-item-delete', event =>{
+    $(event.target).closest('li').remove();
+    
+
+    //console.log($(event.currentTarget));
+  });
 });
