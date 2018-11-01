@@ -1,4 +1,3 @@
-'use strict';
 
 function generateListItem(item) //does this also need to be wrapped in a jquery object?
 {
@@ -12,8 +11,8 @@ function generateListItem(item) //does this also need to be wrapped in a jquery 
       <span class="button-label">delete</span>
     </button>
   </div>
-</li>`;
-}
+</li>`
+
 
 $(function(){
   $('form').submit((event)=>{
