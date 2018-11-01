@@ -9,3 +9,5 @@ $(function(){
     $('.hero img').attr('alt', currentAlt);
   });
 });
+
+//bc mouse clicks and tab/enter behave differently, we need to use currentTag
