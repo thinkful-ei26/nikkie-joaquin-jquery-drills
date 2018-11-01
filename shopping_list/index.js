@@ -1,4 +1,6 @@
 'use strict';
+/*eslint-env jquery*/
+//^js comment that eslint parses
 
 function generateListItem(item) //does this also need to be wrapped in a jquery object?
 {
@@ -39,9 +41,7 @@ $(function(){
 
   //toggle check functionality: 
   $('.shopping-list').on('click', '.shopping-item-toggle', event =>{
-    // $(event.target).closest('.shopping-item').toggleClass('shopping-item__checked');
-    // console.log($(event.target).closest('.shopping-item'));
-    
+
     $(event.target).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
 
   });
